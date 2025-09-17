@@ -6,18 +6,21 @@ import ThemeToggle from './ThemeToggle.astro';
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
 	{ label: 'Home', href: '/' },
-	{ label: 'Work', href: '/work/' },
+	{ label: 'Projects', href: '/projects/' },
+	{ label: 'Blog', href: '/blog/' },
+	{ label: 'Experience', href: '/experience/' },
+	{ label: 'Education', href: '/education/' },
 	{ label: 'About', href: '/about/' },
 ];
 
 /** Icon links to social media — edit these with links to your profiles! */
 const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[] = [
-	{ label: 'Twitter', href: 'https://twitter.com/me', icon: 'twitter-logo' },
-	{ label: 'Twitch', href: 'https://twitch.tv/me', icon: 'twitch-logo' },
-	{ label: 'GitHub', href: 'https://github.com/me', icon: 'github-logo' },
-	{ label: 'CodePen', href: 'https://codepen.io/me', icon: 'codepen-logo' },
-	{ label: 'dribbble', href: 'https://dribbble.com/me', icon: 'dribbble-logo' },
-	{ label: 'YouTube', href: 'https://www.youtube.com/@me/', icon: 'youtube-logo' },
+	{ label: 'Mail', href: 'mailto:guptasid2008@gmail.com', icon: 'mail-logo' },
+	{ label: 'LinkedIn', href: 'https://www.linkedin.com/in/siddhartha-gupta-94410a28b/', icon: 'linkedin-logo' },
+	{ label: 'Discord', href: 'https://discord.com/users/811618938583515177', icon: 'discord-logo' },
+	{ label: 'GrabCAD', href: 'https://grabcad.com/siddhartha.gupta-2', icon: 'codepen-logo' },
+	{ label: 'GitHub', href: 'https://github.com/SidGupta4761', icon: 'github-logo' },
+	
 ];
 
 /** Test if a link is pointing to the current page. */
@@ -32,8 +35,7 @@ const isCurrentPage = (href: string) => {
 <nav>
 	<div class="menu-header">
 		<a href="/" class="site-title">
-			<Icon icon="terminal-window" color="var(--accent-regular)" size="1.6em" gradient />
-			Jeanine White
+			Siddhartha Gupta
 		</a>
 		<menu-button>
 			<template>
