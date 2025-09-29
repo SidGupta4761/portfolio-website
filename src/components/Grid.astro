@@ -36,18 +36,18 @@ const { variant } = Astro.props;
 		}
 
 		.grid.offset {
-			--row-offset: 7.5rem;
+			--row-offset: 6rem;
 			padding-bottom: var(--row-offset);
 		}
 
 		/* Shift first item in each row vertically to create staggered effect. */
-		.grid.offset > :global(:nth-child(odd)) {
+		.grid.offset > :global(:nth-child(even)) {
 			transform: translateY(var(--row-offset));
 		}
 
 		/* If last row contains only one item, display it in the second column. */
 		.grid.offset > :global(:last-child:nth-child(odd)) {
-			grid-column: 2 / 3;
+			grid-column: 1 / 2;
 			transform: none;
 		}
 

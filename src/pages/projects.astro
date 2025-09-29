@@ -9,6 +9,22 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const projects = (await getCollection('work')).sort(
 	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf(),
 );
+
+const projects2 = (await getCollection('simulation')).sort(
+	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf(),
+);
+
+const projects3 = (await getCollection('misc')).sort(
+	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf(),
+);
+
+const projects4 = (await getCollection('math')).sort(
+	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf(),
+);
+
+const projects5 = (await getCollection('elec')).sort(
+	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf(),
+);
 ---
 
 <BaseLayout
@@ -19,12 +35,67 @@ const projects = (await getCollection('work')).sort(
 		<main class="wrapper stack gap-8">
 			<Hero
 				title="My Projects"
-				tagline="See my most recent projects below to get an idea of my past experience."
 				align="start"
+			/>
+			<Hero
+				title=''
+				tagline="FIRST Robotics"
 			/>
 			<Grid variant="offset">
 				{
 					projects.map((project) => (
+						<li>
+							<PortfolioPreview project={project} />
+						</li>
+					))
+				}
+			</Grid>
+			<Hero
+				title=''
+				tagline="Simulation"
+			/>
+			<Grid variant="offset">
+				{
+					projects2.map((project) => (
+						<li>
+							<PortfolioPreview project={project} />
+						</li>
+					))
+				}
+			</Grid>
+			<Hero
+				title=''
+				tagline="Electronics"
+			/>
+			<Grid variant="offset">
+				{
+					projects5.map((project) => (
+						<li>
+							<PortfolioPreview project={project} />
+						</li>
+					))
+				}
+			</Grid>
+			<Hero
+				title=''
+				tagline="Mathematics"
+			/>
+			<Grid variant="offset">
+				{
+					projects4.map((project) => (
+						<li>
+							<PortfolioPreview project={project} />
+						</li>
+					))
+				}
+			</Grid>
+			<Hero
+				title=''
+				tagline="Miscellaneous"
+			/>
+			<Grid variant="offset">
+				{
+					projects3.map((project) => (
 						<li>
 							<PortfolioPreview project={project} />
 						</li>

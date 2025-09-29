@@ -1,119 +1,228 @@
 ---
-import ContactCTA from '../components/ContactCTA.astro';
+import AboutLayout from '../layouts/AboutLayout.astro';
 import Hero from '../components/Hero.astro';
-import BaseLayout from '../layouts/BaseLayout.astro';
+import ContactCTA from '../components/ContactCTA.astro';
+
+const title = "Sid Gupta | About";
+const description = "About me";
 ---
 
-<BaseLayout title="Sid Gupta | About" description="About me">
-	<div class="stack gap-20">
-		<main class="wrapper about">
-			<Hero
-				title="About"
-				tagline="Thanks for stopping by. Read below to learn more about myself and my background."
-			>
-				<img
-					width="1553"
-					height="873"
-					src=""
-					alt="sid at work"
-				/>
-			</Hero>
+<AboutLayout title={title} description={description}>
+  <!-- HERO ABOVE COLUMNS -->
+  <div slot="header">
+    <Hero title="About" tagline="A bit more about me." />
+  </div>
 
-			<section>
-				<h2 class="section-title">Background</h2>
-				<div class="content">
-					<p>
-						Lorem ipsum dolor sit amet, <a href="https://astro.build/">Astro</a> makes people happy.
-						Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin nibh nisl condimentum
-						id venenatis a condimentum vitae. Dapibus ultrices in iaculis nunc. Arcu odio ut sem nulla
-						pharetra diam sit amet. Diam quis enim lobortis scelerisque fermentum dui faucibus in ornare.
-					</p>
-					<p>
-						Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget gravida cum sociis
-						natoque penatibus. Cras fermentum odio eu feugiat pretium nibh. Proin nibh nisl
-						condimentum id venenatis. Porta nibh venenatis cras sed felis eget velit. Id diam vel
-						quam elementum pulvinar etiam non.
-					</p>
-					<p>
-						Ultrices tincidunt arcu non sodales neque sodales ut. Sed enim ut sem viverra aliquet
-						eget sit amet. Lacus luctus accumsan tortor posuere ac ut consequat semper viverra.
-						Viverra accumsan in nisl nisi scelerisque eu ultrices. In massa tempor nec feugiat nisl
-						pretium fusce.
-					</p>
-				</div>
-			</section>
-			<section>
-				<h2 class="section-title">Education</h2>
-				<div class="content">
-					<p>Corporis voluptates tenetur laudantium.</p>
-				</div>
-			</section>
-			<section>
-				<h2 class="section-title">Skills</h2>
-				<div class="content">
-					<p>officia unde omnis</p>
-				</div>
-			</section>
-		</main>
+  <!-- LEFT COLUMN -->
+  <div slot="left">
+    <h2 class="sg-section-title">Contact</h2>
+    <div class="sg-content">
+      <p><b>Email</b>: guptasid2008@gmail.com</p>
+      <p><b>Location</b>: Raleigh, NC | Charlotte, NC</p>
+	  <p><b>Website</b>: sidgupta.dev</p>
+    </div>
 
-		<ContactCTA />
+    <h2 class="sg-section-title">Education</h2>
+    <div class="sg-content">
+      <p><b>North Carolina State University</b> | University Honors Student | Raleigh, NC | Expected May 2029</p>
+	  <p><b>B.S. Mechanical Engineering</b> (Declared); <b>B.S. Computer Engineering</b> (Intended Double Major)</p>
+	  <br>
+	  <p><b>North Carolina School of Science and Math</b> | GPA: 4.75 | Durham, NC | August 2023 - May 2025</p>
+	  <br>
+	  <p><b>Ardrey Kell High School</b> | GPA: 4.63 | Charlotte, NC | August 2021 - June 2023</p>
 	</div>
-</BaseLayout>
 
-<style>
-	.about {
-		display: flex;
-		flex-direction: column;
-		gap: 3.5rem;
-	}
+	<h2 class="sg-section-title">Skills</h2>
+    <div class="sg-content">
+      <p><b>Mechanical Design</b>: SolidWorks (Certified Solidworks Professional, sheet metal, weldments), Onshape (enterprise PDM, FeatureScripts, surfacing), Fusion 360</p>
+	  <br>
+	  <p><b>Manufacturing</b>: 3D printing (Prusa → Markforged), CNC router (XCarve, ShopBot), machining (mill, lathe), laser cutting, soldering</p>
+	  <br>
+	  <p><b>Software</b>: ROS2, Gazebo, NVIDIA Isaac Sim, Python/C++ (microcontrollers/sensors, ROS/OmniGraph nodes, data analysis), Linux</p>
+	  <br>
+	  <p><b>Electronics</b>: Microcontrollers (Arduino, Raspberry Pi 3 & Pico), sensor/telemetry integration, IoT systems</p>
+	  <br>
+	  <p><b>Other</b>: Git/GitHub, Microsoft Office, Google Suite/Workspace</p>
+	</div>
 
-	img {
-		margin-top: 1.5rem;
-		border-radius: 1.5rem;
-		box-shadow: var(--shadow-md);
-	}
+	<h2 class="sg-section-title">Relevant Coursework</h2>
+    <div class="sg-content">
+      <p><b>North Carolina State Univerity</b>: Engineering Statics, Struc & Prop of Engineering Materials, Physics for Engineers II</p>
+	  <br>
+	  <p><b>North Carolina School of Science and Math</b>: Multivariable Calculus, Differential Equations, Mechanical Engineering, AP Physics C Mechanics, Robotics Design, Electrical Engineering, Linear Algebra, Satellite Design</p>
+	  <br>
+	  <p><b>Ardrey Kell High School</b>: AP Calculus BC, AP Environmental Science</p>
+	</div>
+  </div>
 
-	section {
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-		color: var(--gray-200);
-	}
+  <!-- RIGHT COLUMN -->
+  <div slot="right">
+    <h2 class="sg-section-title">Background</h2>
+    <div class="sg-content">
+      <p>I’m drawn to engineering because it challenges me to think both practically and creatively, shaping designs that not only work on paper but also perform in the real world. I enjoy working with systems that move, adapt, and interact, where precision and imagination meet to create something greater than the sum of its parts. Mathematics plays an important supporting role, providing a framework to analyze problems and refine ideas.</p>
+	  <br>
+	  <p>Just as important to me is the collaborative side of engineering. Leading teams, mentoring peers, and sharing knowledge through outreach have shown me the value of building communities around innovation. Now continuing my path at NC State, I’m excited to keep pushing my technical rigor, creativity, and meaningful impact.</p>
+	  <br>
+	  <p>Outside of engineering, I’ve spent over a decade on the tennis court, where competing and captaining my team taught me resilience and adaptability. I also enjoy power sports and anything automotive/racing, which tend to connect back to the same fascination with motion and design that drives my technical work.</p>
+	</div>
 
-	.section-title {
-		grid-column-start: 1;
-		font-size: var(--text-xl);
-		color: var(--gray-0);
-	}
+    <h2 class="sg-section-title">Experience</h2>
+    <div class="sg-content">
+      <p>
+    <strong>Freshman Recruit</strong><br>
+    <em>Pack Motorsports (NC State Formula SAE Team)</em> | Sept 2025 – Present<br>
+    <ul>
+      <li>Training focused on machining (manual mill and lathe) for part fabrication.</li>
+      <li>Studying Matlab, Simulink, and FEA to prepare for subsystem contributions.</li>
+      <li>Studying race car design through resources such as Tune to Win</li>
+    </ul>
+  </p>
 
-	.content {
-		grid-column: 2 / 4;
-	}
+  <br>
 
-	.content :global(a) {
-		text-decoration: 1px solid underline transparent;
-		text-underline-offset: 0.25em;
-		transition: text-decoration-color var(--theme-transition);
-	}
+  <p>
+    <strong>Software Team Member</strong><br>
+    <em>AquaPack Robotics (RoboSub Team)</em> | Sept 2025 – Present<br>
+    <ul>
+      <li>Learning Rust to contribute to team's AUV codebase</li>
+      <li>Applying prior ROS2 experience to help integrate a StereoLabs Zed X camera.</li>
+      <li>Supporting development of autonomous navigation and perception systems.</li>
+    </ul>
+  </p>
 
-	.content :global(a:hover),
-	.content :global(a:focus) {
-		text-decoration-color: currentColor;
-	}
+  <br>
 
-	@media (min-width: 50em) {
-		.about {
-			display: grid;
-			grid-template-columns: 1fr 60% 1fr;
-		}
+  <p>
+    <strong>Student Design Competition Team Member</strong><br>
+    <em>ASME Student Section at NC State</em> | Sept 2025 – Present<br>
+    <ul>
+      <li>Collaborate with peers to solve applied design challenges through the ASME Student Design Competition.</li>
+      <li>This year's SDC involves delivering different garbage/recycling units safely and correctly through a model city.</li>
+      <li>Engage in seminars, professional events, and service initiatives through the ASME student chapter.</li>
+    </ul>
+  </p>
 
-		.about > :global(:first-child) {
-			grid-column-start: 2;
-		}
+  <br>
 
-		section {
-			display: contents;
-			font-size: var(--text-lg);
-		}
-	}
-</style>
+  <p>
+    <strong>Co-Captain & Mechanical Lead</strong><br>
+    <em>FIRST Robotics Competition Team 900, The Zebracorns</em> | October 2023 - April 2025<br>
+    <ul>
+      <li>Guided team through loss of mentors and heavy senior turnover pre-2025 to the 2nd best season in 23-year history, winning 2025 FNC District and State Championships, ranking 2nd in NC, and setting a team-record peak EPA of 1724.</li>
+	  <li>Directed 25-member mechanical and 5-member CAD team, dedicating ~50 hrs/week during peak build season to oversee prototyping, fabrication, and assembly of 150 lb competition robots.</li>
+	  <li>Designed master geometry, drivetrains, elevators, and shooters while mentoring juniors on subsystems; authored configurable sheet metal bumper design used by 100+ teams worldwide; managed team Onshape enterprise and public CAD releases.
+</li>
+	</ul>
+</li>
+    </ul>
+  </p>
+
+  <br>
+
+  <p>
+    <strong>Researcher & Team Lead</strong><br>
+    <em>NCSSM Research in Mathematics</em> | January 2024 - February 2025<br>
+    <ul>
+      <li>Led 3-person of students from NCSSM’s selective RMath program, engaging in rigorous problem-solving and proof technique</li>
+      <li>Researched exotic integrals of the arctangent function, alongside complex analysis independent study in the fall.</li>
+	  <li>Independently worked with another student on an exploration of perfect Faro shuffling</li>
+	  <li>Presented at 2024 NCSSM Research Symposium and got distinction from the Chancellor</li>    
+	</ul>
+  </p>
+
+  <br>
+
+  <p>
+    <strong>Co-Founder</strong><br>
+    <em>RISE with YETI STEM Outreach Initiative</em> | May 2023 - July 2024<br>
+    <ul>
+      <li>Provided affordable STEM education to students in under-resourced schools, introducing over 60 students to robotics, business, and sustainability</li>
+      <li>Raised $3000+ in sponsorships and reached out to 5 Title I schools in the Charlotte area</li>
+	  <li>Personally taught daily lessons for 3 weeks, during July 2023 and 2024 to students at QCRA</li>
+    </ul>
+  </p>
+
+  <br>
+
+  <p>
+    <strong>Men’s Varsity Captain</strong><br>
+    <em>NCSSM Tennis Team</em> | February 2024 - April 2025<br>
+    <ul>
+      <li>Captained 15-member tennis team for 2024 and 2025 Spring tennis season</li>
+      <li>Achieved 3rd in 2024 NCHSAA 2A State Men’s Tennis Championships in Doubles</li>
+	  <li>Won Super Six (Durham/Raleigh area) 1A/2A All-Conference Award</li>
+    </ul>
+  </p>
+
+  <br>
+
+  <p>
+    <strong>Member</strong><br>
+    <em>Math Clubs – Ardrey Kell & NCSSM</em> | 2021–2025<br>
+    <ul>
+      <li>Competed in HMMT, Duke Math Meet, College of Charleston Math Meet, and Math Madness.</li>
+      <li>Three-time AIME qualifier (AMC 12), placed top 3 in CofC LIII in 2023 and 2024</li>
+    </ul>
+  </p>
+
+  <br>
+
+  <p>
+    <strong>STEM Outreach Mentor</strong><br>
+    <em>FIRST Tech Challenge & Local Schools</em> | 2022–2025<br>
+    <ul>
+      <li>Volunteered 40+ hours at FIRST events and served as referee/mentor.</li>
+      <li>Taught CAD/robotics workshops at Omni Montessori and NCSSM.</li>
+    </ul>
+  </p>
+
+  <br>
+
+  <p>
+    <strong>Design Lead</strong><br>
+    <em>Engineering Competitions (TSA, Conrad Challenge, BWSi CubeSat)</em> | 2021–2024<br>
+    <ul>
+      <li>Led design for TSA teams (3× State Finalists, Nationals Qualifier).</li>
+      <li>2023 Conrad Challenge Semi-Finalist and CubeSat Challenge participant.</li>
+    </ul>
+  </p>
+
+  <br>
+
+  <p>
+    <strong>High School Intern</strong><br>
+    <em>Comake</em> | September 2024 - December 2024<br>
+    <ul>
+      <li>Developed AI-enabled data deduplication algorithms for City of Atlanta tourism website.</li>
+      <li>Improved process efficiency by ~30 hours/month through prompt engineering and automation.</li>
+    </ul>
+  </p>
+
+  <br>
+
+  <p>
+    <strong>Tennis Player</strong><br>
+    <em>USTA & Academy Training</em> | 2013 – Present<br>
+    <ul>
+      <li>Competed in USTA tournaments for 8 years with 20+ regional and state-level trophies.</li>
+      <li>Achieved a peak UTR of 7.5.</li>
+    </ul>
+  </p>
+
+  <br>
+
+  <p>
+    <strong>Student</strong><br>
+    <em>AwesomeMath Summer Program</em> | 2023 – 2024<br>
+    <ul>
+      <li>Completed Level II and III coursework in algebra, number theory, combinatoric, and geometry.</li>
+    </ul>
+
+  <br><br>
+  </p>
+
+    </div>
+  </div>
+
+  <ContactCTA />
+</AboutLayout>

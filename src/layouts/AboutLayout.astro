@@ -1,0 +1,98 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title?: string | undefined;
+  description?: string | undefined;
+}
+
+const { title, description } = Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  <div class="sg-about-outer wrapper">
+    <!-- New slot for page header (Hero) -->
+    <div class="sg-about-header">
+      <slot name="header" />
+    </div>
+
+    <div class="sg-about-grid">
+      <aside class="sg-about-left">
+        <slot name="left" />
+      </aside>
+      <main class="sg-about-right">
+        <slot name="right" />
+      </main>
+    </div>
+
+    <!-- Add this line for the default slot -->
+    <slot />
+  </div>
+</BaseLayout>
+
+<style>
+  :global(.sg-about-outer) {
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+  }
+
+  :global(.sg-about-header) {
+    margin-bottom: 1.5rem;
+  }
+
+  :global(.sg-about-grid) {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2.5rem;
+    align-items: start;
+    width: 100%;
+  }
+
+  :global(.sg-about-left),
+  :global(.sg-about-right) {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; /* more breathing room between items */
+  }
+
+  :global(.sg-about-left) { padding-right: 1rem; }
+  :global(.sg-about-right) { padding-left: 1rem; }
+
+  /* Section title styling */
+  :global(.sg-section-title) {
+    font-family: var(--font-brand, inherit);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--gray-0);
+    margin: 2rem 0 0.5rem 0; /* <-- more top margin between titles */
+    position: relative;
+    padding-bottom: 0.35rem;
+  }
+
+  :global(.sg-section-title)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, var(--accent-regular, #4f46e5) 70%, transparent 100%);
+  }
+
+  :global(.sg-content) {
+    font-size: rem;
+    color: var(--gray-200);
+    line-height: 1.6;
+  }
+
+  @media (max-width: 800px) {
+    :global(.sg-about-grid) {
+      grid-template-columns: 1fr;
+    }
+    :global(.sg-about-left),
+    :global(.sg-about-right) {
+      padding: 0;
+    }
+  }
+</style>
