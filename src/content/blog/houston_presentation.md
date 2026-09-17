@@ -2,7 +2,8 @@
 title: 2025 Worlds Presentation
 tags:
   - Conference
-publishDate: 2019-03-04 00:00:00
+# Original WordPress post date; presentation took place in April 2025.
+publishDate: 2025-04-25
 img: /assets/houston_cover.jpeg
 img_alt: cover pic
 description: |

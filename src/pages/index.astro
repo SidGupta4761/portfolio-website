@@ -1,5 +1,5 @@
 ---
-import { getCollection } from 'astro:content';
+import { getEntry } from 'astro:content';
 // Component Imports
 import CallToAction from '../components/CallToAction.astro';
 // Page section components
@@ -13,20 +13,23 @@ import Skills from '../components/Skills.astro';
 // Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-// ...existing imports...
-const work = await getCollection('work');
-const simulation = await getCollection('simulation');
-const misc = await getCollection('misc');
-const elec = await getCollection('elec');
-const blog = await getCollection('blog');
+// Explicit IDs keep the selection and reading order identical in dev and production.
+const featuredProjects = [
+  { collection: 'aerospace', id: 'lspace' },
+  { collection: 'work', id: 'c4' },
+  { collection: 'simulation', id: 'summer2025' },
+  { collection: 'simulation', id: 'rover' },
+] as const;
 
-// Select specific items (add checks if collections might be empty)
-const selectedProjects = [
-  work[2],         // First from work
-  simulation[0],   // First from simulation
-  simulation[1],         // First from misc
-  work[1]          // Second from work
-].filter(Boolean); // Remove undefined if any collection is empty
+const selectedProjects = await Promise.all(
+  featuredProjects.map(async (reference) => {
+    const project = await getEntry(reference);
+    if (!project) {
+      throw new Error(`Featured project not found: ${reference.collection}/${reference.id}`);
+    }
+    return project;
+  }),
+);
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/basics/astro-components/

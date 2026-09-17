@@ -2,7 +2,8 @@
 title: Diving into ROS 2 and Simulation
 tags:
   - Simulation
-publishDate: 2020-03-04 00:00:00
+# Original WordPress post date; see README.md for sources.
+publishDate: 2025-06-27
 img: /assets/ros_blog_cover.png
 img_alt: cover pic
 description: |

@@ -2,7 +2,7 @@
 title: 3DP Differential Swerve Module
 tags:
   - Miscellaneous
-publishDate: 2020-12-01 00:00:00
+# Project date unconfirmed; omitted rather than using the old 2020 placeholder.
 img: /assets/diffy_module.png
 img_alt: alt
 description: | 

@@ -2,7 +2,8 @@
 title: Suspended Swerve Concept for Mars Rover
 tags:
   - Simulation
-publishDate: 2020-03-04 00:00:00
+# Month-level sorting anchor: latest project month in resume (September 2025-May 2026).
+publishDate: 2026-05-01
 img: /assets/rover_top.png
 img_alt: cover pic
 description: |

@@ -3,7 +3,8 @@ title: Dynamically shifting airbag concept
 
 tags:
   - Miscellaneous
-publishDate: 2019-10-02 00:00:00
+# Season-level sorting anchor: 2023-2024 Conrad Challenge; exact month/day unknown.
+publishDate: 2024-01-01
 img: /assets/stage_1.png
 img_alt: Soft pink and baby blue water ripples together in a subtle texture.
 description: |

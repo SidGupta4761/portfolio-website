@@ -2,7 +2,8 @@
 title: Perfect Faro Shuffling
 tags:
   - Math
-publishDate: 2020-03-04 00:00:00
+# Month-level sorting anchor: page identifies the report as February 2024; exact day unknown.
+publishDate: 2024-02-01
 img: /assets/faro_poster.jpg
 img_alt: cover pic
 description: |

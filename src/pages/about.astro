@@ -22,10 +22,10 @@ const description = "About me";
 	  <p><b>Website</b>: sidgupta.dev</p>
     </div>
 
-    <h2 class="sg-section-title">Education</h2>
+    <h2 id="education" class="sg-section-title">Education</h2>
     <div class="sg-content">
-      <p><b>North Carolina State University</b> | University Honors Student | Raleigh, NC | Expected May 2029</p>
-	  <p><b>B.S. Mechanical Engineering</b> (Declared); <b>B.S. Electrical Engineering</b> (Intended Double Major)</p>
+      <p><b>North Carolina State University</b> | University Honors Student | Raleigh, NC | Expected May 2028</p>
+	  <p><b>B.S. Mechanical Engineering</b>, <b>Minor in Mathematics</b></p>
 	  <br>
 	  <p><b>North Carolina School of Science and Math</b> | GPA: 4.75 | Durham, NC | August 2023 - May 2025</p>
 	  <br>
@@ -34,20 +34,20 @@ const description = "About me";
 
 	<h2 class="sg-section-title">Skills</h2>
     <div class="sg-content">
-      <p><b>Mechanical Design</b>: SolidWorks (Certified Solidworks Professional, sheet metal, weldments), Onshape (enterprise PDM, FeatureScripts, surfacing), Fusion 360</p>
+      <p><b>Mechanical Design</b>: SolidWorks (Certified SOLIDWORKS Professional, sheet metal, weldments), Onshape (FeatureScripts, surfacing), Fusion 360, Siemens NX</p>
 	  <br>
-	  <p><b>Manufacturing</b>: 3D printing (Prusa → Markforged), CNC router (XCarve, ShopBot), machining (mill, lathe), laser cutting, soldering</p>
+	  <p><b>Manufacturing</b>: 3D printing (Prusa, Markforged), CNC (XCarve, ShopBot), machining (3-axis mill, lathe), laser cutting, soldering</p>
 	  <br>
-	  <p><b>Software</b>: ROS2, Gazebo, NVIDIA Isaac Sim, Python/C++ (microcontrollers/sensors, ROS/OmniGraph nodes, data analysis), Linux</p>
+	  <p><b>Software</b>: ROS 2, Gazebo, NVIDIA Isaac Sim, Python/C++ (microcontrollers/sensors, ROS/OmniGraph nodes, data analysis), Linux</p>
 	  <br>
 	  <p><b>Electronics</b>: Microcontrollers (Arduino, Raspberry Pi 3 & Pico), sensor/telemetry integration, IoT systems</p>
 	  <br>
-	  <p><b>Other</b>: Git/GitHub, Microsoft Office, Google Suite/Workspace</p>
+	  <p><b>Other</b>: MATLAB, Git/GitHub, Microsoft Office, Google Suite/Workspace</p>
 	</div>
 
 	<h2 class="sg-section-title">Relevant Coursework</h2>
     <div class="sg-content">
-      <p><b>North Carolina State Univerity</b>: Engineering Statics, Struc & Prop of Engineering Materials, Physics for Engineers II</p>
+      <p><b>North Carolina State University</b>: Engineering Dynamics, Vibrations, Solid Mechanics, Engineering Statics, Structure and Properties of Engineering Materials, Thermodynamics I, Differential Equations, Linear Algebra, Robotics Design</p>
 	  <br>
 	  <p><b>North Carolina School of Science and Math</b>: Multivariable Calculus, Differential Equations, Mechanical Engineering, AP Physics C Mechanics, Robotics Design, Electrical Engineering, Linear Algebra, Satellite Design</p>
 	  <br>
@@ -66,23 +66,22 @@ const description = "About me";
 	  <p>Outside of engineering, I’ve spent over a decade on the tennis court, where competing and captaining my team taught me resilience and adaptability. I also enjoy power sports and anything automotive/racing, which tend to connect back to the same fascination with motion and design that drives my technical work.</p>
 	</div>
 
-    <h2 class="sg-section-title">Experience</h2>
+    <h2 id="experience" class="sg-section-title">Experience</h2>
     <div class="sg-content">
-  
-  <p>
-    <strong>Mechatronics Intern</strong><br>
-    <em>iOrganBio</em> | October 2025 - Present<br>
-    <ul>
-      <li>iOrganBio is a startup creating the first AI-powered cell manufacturing platform, recently coming out of stealth with $2 million.</li>
-      <li>Designed and integrated electromechanical systems for scalable development and control for cell-cultures, using sensor-driven feedback loops and control algorithm tuning for CellForge prototypes.</li>
-      <li>Motion planning and Sim-to-real deployment of robotic arms for cell-handling tasks.</li>
 
+  <div class="experience-entry">
+    <strong>Simulation Team Member</strong><br>
+    <em>AquaPack Robotics (RoboSub Team)</em> | Sept 2025 – Present<br>
+    <ul>
+      <li>Developing perception and hydrodynamics simulations of SeaWolf IX in Isaac Sim using OceanSim and Warp.</li>
+      <li>Working on integration of ZED X and ROS 2 onto SeaWolf IX and its navigation pipeline.</li>
+      <li>Using Omniverse Replicator to generate synthetic training data for a field object detection model.</li>
     </ul>
-  </p>
-  
+  </div>
+
   <br>
 
-  <p>
+  <div class="experience-entry">
     <strong>Undergraduate Research Assistant</strong><br>
     <em>NCSU Engineering Mechanics and Space Systems Lab</em> | Oct 2025 – Present<br>
     <ul>
@@ -94,75 +93,73 @@ const description = "About me";
       <li>Contributing to an ocean energy harvester project using DEEC-tec technology</li>
       <li>Designing, fabricating, and assembling prototypes of frequency up-conversion methods to test on DEEC hydrogels.</li>
     </ul>
-  </p>
+  </div>
 
   <br>
 
-  <p>
-    <strong>Software Team Member</strong><br>
-    <em>AquaPack Robotics (RoboSub Team)</em> | Sept 2025 – Present<br>
+  <div class="experience-entry">
+    <strong>Mechatronics Intern</strong><br>
+    <em>iOrganBio</em> | January 2026 – August 2026<br>
     <ul>
-      <li>Developing perception and hydrodynamics simulation of SW IX in Isaac Sim using OceanSim and Warp</li>
-      <li>Working on integration of ZED X and ROS 2 onto SW VIII and navigation pipeline</li>
-      <li>Learning Rust through Interactive Rust Book and using ros2-client</li>
+      <li>Designed and integrated incubation systems for scalable cell-culture development, using closed-loop control to regulate environmental variables.</li>
+      <li>Developed MES protocols and worked on sim-to-real deployment of Hamilton robots for liquid- and cell-handling tasks.</li>
+
     </ul>
-  </p>
+  </div>
 
   <br>
-  
-  <p>
-    <strong>Freshman Recruit</strong><br>
-    <em>Pack Motorsports (NC State Formula SAE Team)</em> | Sept 2025 – Present<br>
+
+  <div class="experience-entry">
+    <strong>Project Manager – Team 24</strong><br>
+    <em>NASA L’SPACE Mission Concept Academy</em> | May 2026 – August 2026<br>
     <ul>
-      <li>Training focused on machining (manual mill and lathe) for part fabrication.</li>
-      <li>Studying Matlab, Simulink, and FEA to prepare for subsystem contributions.</li>
-      <li>Studying race car design through resources such as Tune to Win</li>
+      <li>Led a 20-member team through System Requirements Review, Mission Definition Review, and Preliminary Design Review, coordinating schedules and deliverables.</li>
+      <li>Helped align lunar science objectives with instrument selection and engineering requirements.</li>
+      <li>Supported vehicle CAD and mechanical design for a lunar base station and autonomous scout.</li>
     </ul>
-  </p>
+  </div>
 
   <br>
 
-  <p>
-    <strong>Student Design Competition Team Member</strong><br>
-    <em>ASME Student Section at NC State</em> | Sept 2025 – Jan 2025<br>
-    <ul>
-      <li>Collaborate with peers to solve applied design challenges through the ASME Student Design Competition.</li>
-      <li>This year's SDC involves delivering different garbage/recycling units safely and correctly through a model city.</li>
-      <li>Engage in seminars, professional events, and service initiatives through the ASME student chapter.</li>
-    </ul>
-  </p>
-
-  <br>
-
-  <p>
-    <strong>Co-Captain & Mechanical Lead</strong><br>
+  <div class="experience-entry">
+    <strong>Design and Mechanical Lead</strong><br>
     <em>FIRST Robotics Competition Team 900, The Zebracorns</em> | October 2023 - April 2025<br>
     <ul>
-      <li>Guided team through loss of mentors and heavy senior turnover pre-2025 to the 2nd best season in 23-year history, winning 2025 FNC District and State Championships, ranking 2nd in NC, and setting a team-record peak EPA of 1724.</li>
+      <li>Led the team to its second-best season in 23-year history, winning the 2025 State Championships and setting a team-record peak EPA of 1724.</li>
 	  <li>Directed 25-member mechanical and 5-member CAD team, dedicating ~50 hrs/week during peak build season to oversee prototyping, fabrication, and assembly of 150 lb competition robots.</li>
 	  <li>Designed master geometry, drivetrains, elevators, and shooters while mentoring juniors on subsystems; authored configurable sheet metal bumper design used by 100+ teams worldwide; managed team Onshape enterprise and public CAD releases.
 </li>
 	</ul>
-</li>
-    </ul>
-  </p>
+  </div>
 
   <br>
 
-  <p>
+  <div class="experience-entry">
+    <strong>Student Design Competition Team Member</strong><br>
+    <em>ASME Student Section at NC State</em> | September 2025 – May 2026<br>
+    <ul>
+      <li>Collaborated with peers to solve applied design challenges through the ASME Student Design Competition.</li>
+      <li>Worked on a competition challenge to deliver garbage and recycling units safely and correctly through a model city.</li>
+      <li>Participated in seminars, professional events, and service initiatives through the ASME student chapter.</li>
+    </ul>
+  </div>
+
+  <br>
+
+  <div class="experience-entry">
     <strong>Researcher & Team Lead</strong><br>
     <em>NCSSM Research in Mathematics</em> | January 2024 - February 2025<br>
     <ul>
-      <li>Led 3-person of students from NCSSM’s selective RMath program, engaging in rigorous problem-solving and proof technique</li>
+      <li>Led a three-person team from NCSSM’s selective RMath program, engaging in rigorous problem-solving and proof techniques.</li>
       <li>Researched exotic integrals of the arctangent function, alongside complex analysis independent study in the fall.</li>
 	  <li>Independently worked with another student on an exploration of perfect Faro shuffling</li>
-	  <li>Presented at 2024 NCSSM Research Symposium and got distinction from the Chancellor</li>    
+	  <li>Presented at 2024 NCSSM Research Symposium and got distinction from the Chancellor</li>
 	</ul>
-  </p>
+  </div>
 
   <br>
 
-  <p>
+  <div class="experience-entry">
     <strong>Co-Founder</strong><br>
     <em>RISE with YETI STEM Outreach Initiative</em> | May 2023 - July 2024<br>
     <ul>
@@ -170,11 +167,11 @@ const description = "About me";
       <li>Raised $3000+ in sponsorships and reached out to 5 Title I schools in the Charlotte area</li>
 	  <li>Personally taught daily lessons for 3 weeks, during July 2023 and 2024 to students at QCRA</li>
     </ul>
-  </p>
+  </div>
 
   <br>
 
-  <p>
+  <div class="experience-entry">
     <strong>Men’s Varsity Captain</strong><br>
     <em>NCSSM Tennis Team</em> | February 2024 - April 2025<br>
     <ul>
@@ -182,74 +179,74 @@ const description = "About me";
       <li>Achieved 3rd in 2024 NCHSAA 2A State Men’s Tennis Championships in Doubles</li>
 	  <li>Won Super Six (Durham/Raleigh area) 1A/2A All-Conference Award</li>
     </ul>
-  </p>
+  </div>
 
   <br>
 
-  <p>
+  <div class="experience-entry">
     <strong>Member</strong><br>
     <em>Math Clubs – Ardrey Kell & NCSSM</em> | 2021–2025<br>
     <ul>
       <li>Competed in HMMT, Duke Math Meet, College of Charleston Math Meet, and Math Madness.</li>
       <li>Three-time AIME qualifier (AMC 12), placed top 3 in CofC LIII in 2023 and 2024</li>
     </ul>
-  </p>
+  </div>
 
   <br>
 
-  <p>
+  <div class="experience-entry">
     <strong>STEM Outreach Mentor</strong><br>
     <em>FIRST Tech Challenge & Local Schools</em> | 2022–2025<br>
     <ul>
       <li>Volunteered 40+ hours at FIRST events and served as referee/mentor.</li>
       <li>Taught CAD/robotics workshops at Omni Montessori and NCSSM.</li>
     </ul>
-  </p>
+  </div>
 
   <br>
 
-  <p>
+  <div class="experience-entry">
     <strong>Design Lead</strong><br>
     <em>Engineering Competitions (TSA, Conrad Challenge, BWSi CubeSat)</em> | 2021–2024<br>
     <ul>
       <li>Led design for TSA teams (3× State Finalists, Nationals Qualifier).</li>
       <li>2023 Conrad Challenge Semi-Finalist and CubeSat Challenge participant.</li>
     </ul>
-  </p>
+  </div>
 
   <br>
 
-  <p>
+  <div class="experience-entry">
     <strong>High School Intern</strong><br>
     <em>Comake</em> | September 2024 - December 2024<br>
     <ul>
       <li>Developed AI-enabled data deduplication algorithms for City of Atlanta tourism website.</li>
       <li>Improved process efficiency by ~30 hours/month through prompt engineering and automation.</li>
     </ul>
-  </p>
+  </div>
 
   <br>
 
-  <p>
+  <div class="experience-entry">
     <strong>Tennis Player</strong><br>
     <em>USTA & Academy Training</em> | 2013 – Present<br>
     <ul>
       <li>Competed in USTA tournaments for 8 years with 20+ regional and state-level trophies.</li>
       <li>Achieved a peak UTR of 7.5.</li>
     </ul>
-  </p>
+  </div>
 
   <br>
 
-  <p>
+  <div class="experience-entry">
     <strong>Student</strong><br>
     <em>AwesomeMath Summer Program</em> | 2023 – 2024<br>
     <ul>
-      <li>Completed Level II and III coursework in algebra, number theory, combinatoric, and geometry.</li>
+      <li>Completed Level II and III coursework in algebra, number theory, combinatorics, and geometry.</li>
     </ul>
 
   <br><br>
-  </p>
+  </div>
 
     </div>
   </div>

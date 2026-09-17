@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import { newestFirst } from '../utils/contentOrder';
 import ContactCTA from '../components/ContactCTA.astro';
 import Grid from '../components/Grid.astro';
 import Hero from '../components/Hero.astro';
@@ -7,23 +8,23 @@ import PortfolioPreview from '../components/PortfolioPreview.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const projects = (await getCollection('work')).sort(
-	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf(),
+	newestFirst,
 );
 
 const projects2 = (await getCollection('simulation')).sort(
-	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf(),
+	newestFirst,
 );
 
 const projects3 = (await getCollection('misc')).sort(
-	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf(),
+	newestFirst,
 );
 
 const projects4 = (await getCollection('math')).sort(
-	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf(),
+	newestFirst,
 );
 
-const projects5 = (await getCollection('elec')).sort(
-	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf(),
+const aerospaceProjects = (await getCollection('aerospace')).sort(
+	newestFirst,
 );
 ---
 
@@ -65,11 +66,11 @@ const projects5 = (await getCollection('elec')).sort(
 			</Grid>
 			<Hero
 				title=''
-				tagline="Electronics"
+				tagline="Aerospace"
 			/>
 			<Grid variant="offset">
 				{
-					projects5.map((project) => (
+					aerospaceProjects.map((project) => (
 						<li>
 							<PortfolioPreview project={project} />
 						</li>

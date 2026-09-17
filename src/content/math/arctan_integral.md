@@ -2,14 +2,15 @@
 title: Exploration of Exotic Arctangent Integral
 tags:
   - Math
-publishDate: 2020-03-04 00:00:00
+# Date printed on the attached final report.
+publishDate: 2024-05-23
 img: /assets/titicaca_cover.png
 img_alt: cover pic
 description: |
   Exploration of integral of rational arctangent function, Spring 2024
 ---
 
-Here is our final report from April 2024:
+Here is our final report from May 23, 2024:
 
 <iframe 
   src="/assets/Exotic Integrals of the Arctangent Function.pdf" 

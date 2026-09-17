@@ -8,7 +8,7 @@ import Pill from '../../components/Pill.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
 interface Props {
-    entry: CollectionEntry<'work'> | CollectionEntry<'simulation'> | CollectionEntry<'misc'>;
+    entry: CollectionEntry<'work'> | CollectionEntry<'simulation'> | CollectionEntry<'misc'> | CollectionEntry<'math'> | CollectionEntry<'aerospace'>;
 }
 
 // This is a dynamic route that generates a page for every Markdown file in src/content/
@@ -19,8 +19,8 @@ export async function getStaticPaths() {
     const simulation = await getCollection('simulation');
     const misc = await getCollection('misc');
 	const math = await getCollection('math');
-	const elec = await getCollection('elec');
-    const allProjects = [...work, ...simulation, ...misc, ...math, ...elec];
+	const aerospace = await getCollection('aerospace');
+    const allProjects = [...work, ...simulation, ...misc, ...math, ...aerospace];
 
     return allProjects.map((entry) => ({
         params: { slug: entry.id },
@@ -30,6 +30,7 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await render(entry);
+const wideDocuments = 'wideDocuments' in entry.data && entry.data.wideDocuments;
 ---
 
 <BaseLayout title={entry.data.title} description={entry.data.description}>
@@ -48,7 +49,7 @@ const { Content } = await render(entry);
 					</Hero>
 				</div>
 			</header>
-			<main class="wrapper">
+			<main class:list={['wrapper', { 'wide-documents': wideDocuments }]}>
 				<div class="stack gap-10 content">
 					{entry.data.img && <img src={entry.data.img} alt={entry.data.img_alt || ''} />}
 					<div class="content">
@@ -97,6 +98,30 @@ const { Content } = await render(entry);
 
 	.content > :global(* + *) {
 		margin-top: 1rem;
+	}
+
+	.wide-documents .content {
+		width: 100%;
+		max-width: none;
+	}
+
+	.wide-documents .content > :global(p),
+	.wide-documents .content > :global(h2) {
+		max-width: 65ch;
+		margin-inline: auto;
+	}
+
+	.wide-documents .content > img {
+		width: 100%;
+		max-width: 65rem;
+		margin-inline: auto;
+	}
+
+	.wide-documents :global(.pdf-viewer) {
+		display: block;
+		width: 100%;
+		height: clamp(32rem, 80vh, 64rem);
+		border-radius: 0.75rem;
 	}
 
 	.content :global(h1),

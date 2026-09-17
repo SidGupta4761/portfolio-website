@@ -2,7 +2,8 @@
 title: FRC Configurable Bumpers
 tags:
   - FIRST Robotics
-publishDate: 2021-03-02 00:00:00
+# Original Chief Delphi post date (UTC); see README.md for source.
+publishDate: 2023-10-24
 img: /assets/bumpers.gif
 img_alt: alt
 description: |

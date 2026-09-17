@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import { newestFirst } from '../utils/contentOrder';
 import ContactCTA from '../components/ContactCTA.astro';
 import Grid from '../components/Grid.astro';
 import Hero from '../components/Hero.astro';
@@ -8,7 +9,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import BlogPreview from '../components/BlogPreview.astro';
 
 const posts = (await getCollection('blog')).sort(
-	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf(),
+	newestFirst,
 );
 ---
 

@@ -2,7 +2,8 @@
 title: Cycloidal Motor Proposal
 tags:
   - Concepts
-publishDate: 2018-03-04 00:00:00
+# Original WordPress post date; see README.md for sources.
+publishDate: 2025-04-25
 img: /assets/cycloidal_cover.png
 img_alt: cover pic
 description: |

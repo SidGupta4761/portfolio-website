@@ -8,7 +8,7 @@ export const collections = {
 		schema: z.object({
 			title: z.string(),
 			description: z.string(),
-			publishDate: z.coerce.date(),
+			publishDate: z.coerce.date().optional(),
 			tags: z.array(z.string()),
 			img: z.string(),
 			img_alt: z.string().optional(),
@@ -20,7 +20,7 @@ export const collections = {
 		schema: z.object({
 			title: z.string(),
 			description: z.string(),
-			publishDate: z.coerce.date(),
+			publishDate: z.coerce.date().optional(),
 			tags: z.array(z.string()),
 			img: z.string(),
 			img_alt: z.string().optional(),
@@ -32,7 +32,7 @@ export const collections = {
 		schema: z.object({
 			title: z.string(),
 			description: z.string(),
-			publishDate: z.coerce.date(),
+			publishDate: z.coerce.date().optional(),
 			tags: z.array(z.string()),
 			img: z.string(),
 			img_alt: z.string().optional(),
@@ -44,22 +44,23 @@ export const collections = {
 		schema: z.object({
 			title: z.string(),
 			description: z.string(),
-			publishDate: z.coerce.date(),
+			publishDate: z.coerce.date().optional(),
 			tags: z.array(z.string()),
 			img: z.string(),
 			img_alt: z.string().optional(),
 		}),
 	}),
-	elec: defineCollection({
-		// Load Markdown files in the src/content/work directory.
-		loader: glob({ base: './src/content/electronics', pattern: '**/*.md' }),
+	aerospace: defineCollection({
+		// Load Markdown files in the src/content/aerospace directory.
+		loader: glob({ base: './src/content/aerospace', pattern: '**/*.md' }),
 		schema: z.object({
 			title: z.string(),
 			description: z.string(),
-			publishDate: z.coerce.date(),
+			publishDate: z.coerce.date().optional(),
 			tags: z.array(z.string()),
 			img: z.string(),
 			img_alt: z.string().optional(),
+			wideDocuments: z.boolean().optional(),
 		}),
 	}),
 	blog: defineCollection({
@@ -68,7 +69,7 @@ export const collections = {
 		schema: z.object({
 			title: z.string(),
 			description: z.string(),
-			publishDate: z.coerce.date(),
+			publishDate: z.coerce.date().optional(),
 			tags: z.array(z.string()),
 			img: z.string(),
 			img_alt: z.string().optional(),
