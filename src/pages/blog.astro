@@ -11,6 +11,14 @@ import BlogPreview from '../components/BlogPreview.astro';
 const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
 	newestFirst,
 );
+
+// Place the internship reflection immediately after Research Updates.
+const reflectionIndex = posts.findIndex((post) => post.id === 'iorganbio-reflection');
+if (reflectionIndex >= 0 && posts.some((post) => post.id === 'research-updates')) {
+	const [reflection] = posts.splice(reflectionIndex, 1);
+	const researchIndex = posts.findIndex((post) => post.id === 'research-updates');
+	posts.splice(researchIndex + 1, 0, reflection);
+}
 ---
 
 <BaseLayout

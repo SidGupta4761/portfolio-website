@@ -1,6 +1,5 @@
 ---
 title: iOrganBio Reflection
-draft: true
 tags:
   - Mechatronics
   - Lab Automation

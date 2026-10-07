@@ -8,6 +8,8 @@ After changing `src/content.config.ts`, restart the development server if entrie
 
 The legacy `publishDate` field controls chronological ordering within project categories and on the blog. It is not currently displayed to visitors. Project entries use the documented project/report period; blog entries use the original post's publication date when available. These dates are not the date a page was added to this repository.
 
+The blog places iOrganBio Reflection immediately after Research Updates, overriding chronological order for that entry while preserving its publication date.
+
 When only a month, year, or season is known, its first day is a sorting anchor, not a claim about an exact publication or completion day. The frontmatter comment records that precision. Unknown dates are omitted and sort after dated entries. Equal dates sort by entry ID so development and production agree. The homepage's featured projects have a separate explicit order in `src/pages/index.astro`.
 
 Date sources checked in September 2026:
