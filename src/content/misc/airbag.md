@@ -1,22 +1,36 @@
 ---
-title: Dynamically shifting airbag concept
-
+title: Adjustable Airbag Deployment Concept
 tags:
   - Miscellaneous
 # Season-level sorting anchor: 2023-2024 Conrad Challenge; exact month/day unknown.
 publishDate: 2024-01-01
 img: /assets/stage_1.png
-img_alt: Soft pink and baby blue water ripples together in a subtle texture.
+img_alt: CAD model of a steering-column enclosure with an airbag inflator supported by linear actuators.
 description: |
-  Dynamically shifting airbag deployment system, designed to reduce injury during airbag deployment.
+  A Conrad Challenge CAD concept exploring how linear actuators could adjust an airbag inflator's position and angle.
 ---
 
-![Alt text](/assets/stage_2.png)
-![Alt text](/assets/stage_3.png)
-![Alt text](/assets/stage_4.png)
+For the 2023–2024 Conrad Challenge, I modeled an adjustable airbag deployment mechanism. The idea was to use an array of linear servos to change the inflator's position and angle, exploring whether deployment geometry could be adapted to the occupant.
 
-This is a model of a concept for the 2023-2024 Conrad Challenge involving an array of linear servos attached to the inflator of an airbag, meant to be able to dynamically change the position and angle of the airbag as it is deployed. This is to improve the safety of airbags, as they currently can accidently injure people, but by being able to change the angle at which it is deployed, those effects can be minimized.
+The enclosure represents a simplified steering column, and the yellow component represents the inflator. Changing the actuators' extensions moves and tilts the supported assembly. The images below illustrate the concept's geometry and deployment views.
 
-The encasing is meant to be a rough model of the steering column, and the yellow part is meant to be a rough model of an inflator. If you want to mess around with the respective extensions of the linear servos, DM me with the email for your Onshape account and I can share the document this project was made in.
+<figure>
+  <img src="/assets/stage_2.png" alt="CAD view of the airbag and inflator assembly within the simplified steering-column enclosure." loading="lazy" />
+  <figcaption>The airbag and inflator assembly within the enclosure.</figcaption>
+</figure>
 
-[Here is the link to its GrabCAD page.](https://grabcad.com/library/dynamically-shifting-airbag-deployment-system-1)
+<figure>
+  <img src="/assets/stage_3.png" alt="CAD view showing the airbag's orientation relative to the adjustable inflator platform." loading="lazy" />
+  <figcaption>A view of the bag's orientation relative to the supported inflator.</figcaption>
+</figure>
+
+<figure>
+  <img src="/assets/stage_4.png" alt="CAD view of the expanded airbag above the actuator-supported inflator platform." loading="lazy" />
+  <figcaption>The expanded bag geometry above the actuator platform.</figcaption>
+</figure>
+
+This is a CAD motion concept; its effect on occupant safety remains untested. The engineering questions include whether the mechanism could move quickly enough, withstand deployment loads, and operate reliably within the available space.
+
+[Explore the CAD model on GrabCAD](https://grabcad.com/library/dynamically-shifting-airbag-deployment-system-1)
+
+If you'd like to explore the actuator positions in Onshape, [contact me](/about/) with the email associated with your Onshape account.

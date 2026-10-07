@@ -1,38 +1,46 @@
 ---
-title: Diving into ROS 2 and Simulation
+title: ROS 2 and Gazebo - From First Nodes to Navigation
 tags:
   - Simulation
 # Original WordPress post date; see README.md for sources.
 publishDate: 2025-06-27
 img: /assets/ros_blog_cover.png
-img_alt: cover pic
+img_alt: Gazebo simulation and RViz side by side, showing a robot navigating a mapped environment.
 description: |
-  My Summer 2025 learning journey!
+  A summer learning project that progressed from ROS 2 fundamentals to sensor-based obstacle avoidance and autonomous TurtleBot3 navigation.
 ---
 
-Over the past few weeks of summer break, I’ve been diving deep into ROS 2 and Gazebo simulation to sharpen my robotics software skills. After hearing about ROS from my old robotics team, The Zebracorns, and seeing how powerful it was for things like swerve drive simulation and autonomous behavior, I finally took the plunge myself. I started by setting up a dual-booted Linux environment and working through the ROS 2 Jazzy tutorials. That covered everything from the command line tools and client libraries to writing basic nodes, publishing and subscribing, working with TF2 frames, and visualizing data in RViz. I also explored rqt for GUI-based debugging and learned how to log and replay data using bag files.
+In summer 2025, I started learning ROS 2 to connect my mechanical design experience with robot software. I had seen the Zebracorns use it for simulation and autonomous behavior, and wanted to understand the system well enough to build my own experiments.
 
-Once I had the core ROS tools down, I moved into the world of simulation with Gazebo Harmonic, learning the basics of SDF files, sensor configuration (mostly LIDAR), and how to spawn and control models through ROS 2. One of my first fun experiments was building on the TF2 examples, where I created a demo where a “follower” turtle tracked a “leader” turtle’s pose by subscribing to its transform. Watching the second turtle move to mirror the first in real time with RViz gave me a tangible sense of how ROS handles spatial transforms and frame graphs.
+I set up a dual-boot Linux environment and worked through ROS 2 Jazzy and Gazebo Harmonic tutorials. ROS 2 handles communication between pieces of robot software; Gazebo supplies a simulated world where I could try those pieces without physical hardware.
 
-<iframe width="560" height="315" src="https://videopress.com/embed/Qn01LZer" frameborder="0" allowfullscreen allow="clipboard-write"></iframe>
+## Starting with motion and coordinate frames
+
+My first experiments focused on nodes, messages, and coordinate frames: how one part of the software communicates with another, and how a robot keeps track of positions. A follower-turtle demo made that tangible by using TF2 transforms to track a leader's pose.
+
+<iframe width="560" height="315" src="https://videopress.com/embed/Qn01LZer" title="ROS 2 follower turtle tracking a leader using coordinate transforms" frameborder="0" loading="lazy" allowfullscreen allow="clipboard-write"></iframe>
+
+I also drove an animated actor around a square path in Gazebo, using velocity commands and a simple behavior loop.
+
+<iframe width="560" height="315" src="https://videopress.com/embed/KgFIfR13" title="Gazebo actor following a square path through ROS 2 velocity commands" frameborder="0" loading="lazy" allowfullscreen allow="clipboard-write"></iframe>
+
+## Giving the robot something to react to
+
+Next, I wrote a C++ node that read simulated LiDAR range data and steered a vehicle away from nearby walls. It was a small exercise, but it connected the full loop: a sensor measurement, a decision in code, and a motion command back to the robot.
+
+<iframe width="560" height="315" src="https://videopress.com/embed/Etdl2a13" title="Simulated vehicle avoiding walls using LiDAR data and a C++ ROS 2 node" frameborder="0" loading="lazy" allowfullscreen allow="clipboard-write"></iframe>
+
+## Building up to autonomous navigation
+
+Using Nav2 and ROBOTIS TurtleBot tutorials, I assembled a TurtleBot3 navigation demo with mapping, localization, path planning, and obstacle avoidance. Getting it running involved plenty of troubleshooting around sensor topics, coordinate transforms, and process startup. Seeing the robot reach a goal on its own made those pieces feel like one system.
+
+<iframe width="560" height="315" src="https://videopress.com/embed/TFlmDW1Y" title="TurtleBot3 navigating to goals with mapping and obstacle avoidance" frameborder="0" loading="lazy" allowfullscreen allow="clipboard-write"></iframe>
+
 <script src="https://videopress.com/videopress-iframe.js"></script>
 
-I also tried scripting some basic actor behavior in Gazebo. Using ROS 2 to drive an animated actor along a square path, I got to explore simple velocity command publishing and behavior loops inside simulation. It’s a relatively small example, but it gave me a hands-on feel for how simulated humans or vehicles could be integrated into larger testing environments for planning or perception.
+<figure>
+  <img src="/assets/rqt.png" alt="An rqt graph showing connections between ROS 2 nodes and message topics." loading="lazy" />
+  <figcaption>Inspecting the connections between nodes helped me understand and debug the navigation system.</figcaption>
+</figure>
 
-<iframe width="560" height="315" src="https://videopress.com/embed/KgFIfR13" frameborder="0" allowfullscreen allow="clipboard-write"></iframe>
-<script src="https://videopress.com/videopress-iframe.js"></script>
-
-Another highlight was a LIDAR-based wall avoidance routine. I spawned a vehicle in a basic world and wrote a C++ node to read LIDAR data and steer it away from nearby obstacles. This gave me a chance to connect sensor input with real-time control, and to reinforce how ROS messages flow between simulated sensors, processing nodes, and actuators.
-
-<iframe width="560" height="315" src="https://videopress.com/embed/Etdl2a13" frameborder="0" allowfullscreen allow="clipboard-write"></iframe>
-<script src="https://videopress.com/videopress-iframe.js"></script>
-
-By the third week, I upgraded to a new desktop build—mainly to unlock heavier simulation workloads and prep for future mechatronics and controls projects. That extra power really paid off when I tackled ROS 2 Navigation (Nav2). Based off the Nav2 and ROBOTIS Turtlebot tutorials, I worked up to a full TurtleBot3 demo navigating through a simulated world with SLAM, global planning, and local control. Getting the full pipeline running required a lot of troubleshooting, especially around sensor topics, transform frames, and process management, but it was worth it to see the robot autonomously navigate to goals with obstacle avoidance in place.
-
-<iframe width="560" height="315" src="https://videopress.com/embed/TFlmDW1Y" frameborder="0" allowfullscreen allow="clipboard-write"></iframe>
-<script src="https://videopress.com/videopress-iframe.js"></script>
-
-![Alt text](/assets/rqt.png)
-
-Looking ahead, I’m planning to experiment with swapping out TurtleBot’s drivetrain in simulation for a more complex custom one of my own design—something closer to what I’d actually build, but still compatible with ROS’s sensor and localization stack. I also want to start exploring NVIDIA Isaac Sim, especially for photorealistic perception simulation and tighter GPU integration. Eventually, I plan to bring in one of my personal long-term hardware projects: the cycloidal motor, a compact, high-reduction gearmotor concept I’ve been developing. The goal is to build out its kinematics, simulate it under load, and integrate it into a full ROS-based workflow. This summer has been all about building the foundation, and now I’m excited to push it further.
-
+These were tutorial-based learning projects, with my own experiments built on top. They gave me a foundation in ROS 2, simulated sensors, and debugging that I now draw on in [my robotics and simulation work](/about/#experience). The original longer-term ideas included custom drivetrains, Isaac Sim, and integrating my [cycloidal gearmotor concept](/blog/cycloidal_proposal/) into a simulation workflow.

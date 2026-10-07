@@ -9,12 +9,32 @@ img: /assets/lspace_cover.png
 img_alt: Side-by-side concept illustration of Team 24's solar-powered base station and autonomous scout drone.
 wideDocuments: true
 description: |
-  Team 24 project manager · NASA Mission Concept Academy · May–August 2026
+  Led a 20-member team in designing a lunar base station and autonomous scout through NASA's L'SPACE Mission Concept Academy · May–August 2026.
 ---
 
-I led a 20-member team through Preliminary Design Review (PDR), coordinating science, engineering, and programmatics while supporting vehicle CAD and mechanical design.
+What would a robot encounter while exploring the Moon's south pole? Team 24's mission concept aimed to map terrain and measure hazards such as dust and radiation near Shackleton–de Gerlache Ridge.
 
-Our lunar south-pole mission concept paired a solar-powered base station with an autonomous scout to survey terrain and environmental hazards near Shackleton–de Gerlache Ridge.
+We developed the concept in NASA's L'SPACE Mission Concept Academy, a student program centered on planning a space mission. Our work covered science goals, vehicle designs, budget, schedule, and a Preliminary Design Review (PDR). The outcome was a design study, with hardware development and testing still ahead.
+
+## How the mission would work
+
+A solar-powered base station would stay on a ridge with favorable sunlight, acting as the scout's home base. It would provide charging, thermal support, data storage, and communications with Earth.
+
+An autonomous scout would explore nearby permanently shadowed terrain, using cameras and depth sensors to map its surroundings and choose routes around hazards. It would return to dock, recharge, and transfer stored measurements. Keeping support equipment at the station would let the mobile vehicle focus on exploration.
+
+## My role
+
+As project manager, I led a 20-member team across science, engineering, and budget and schedule planning. I coordinated subteam leads, assigned ownership of deliverables, tracked deadlines, and organized internal reviews. As the project progressed, I refined task assignments and review checkpoints to address uneven workloads and catch gaps earlier.
+
+I also helped connect science objectives with instrument choices and engineering requirements, and contributed to vehicle CAD, mechanical design, and subsystem integration alongside the engineering team.
+
+## What the review established
+
+A Preliminary Design Review checks whether the proposed design can meet the mission's goals and identifies questions to resolve before detailed design and hardware testing. For us, that meant tracing each science goal to a measurement and the systems needed to make it.
+
+Our final PDR brought together the vehicle designs, system requirements, connections between subsystems, and plans for testing, purchasing equipment, risk, cost, and schedule. Propulsion sizing, integrated mass and power budgets, and detailed mechanical validation remained open work.
+
+The project taught me how closely technical coordination and project management are linked. A change in an instrument, vehicle, or operating plan could affect several other teams' work; making those connections visible was a central part of my role.
 
 ## Project overview
 
