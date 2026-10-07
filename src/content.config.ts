@@ -67,6 +67,7 @@ export const collections = {
 		// Load Markdown files in the src/content/work directory.
 		loader: glob({ base: './src/content/blog', pattern: '**/*.md' }),
 		schema: z.object({
+			draft: z.boolean().default(false),
 			title: z.string(),
 			description: z.string(),
 			publishDate: z.coerce.date().optional(),

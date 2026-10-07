@@ -15,7 +15,7 @@ interface Props {
 // Read more about dynamic routes and this `getStaticPaths` function in the Astro docs:
 // https://docs.astro.build/en/core-concepts/routing/#dynamic-routes
 export async function getStaticPaths() {
-    const blog = await getCollection('blog');
+    const blog = await getCollection('blog', ({ data }) => !data.draft);
     const allProjects = [...blog];
 
     return allProjects.map((entry) => ({
