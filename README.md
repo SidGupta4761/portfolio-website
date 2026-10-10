@@ -4,6 +4,12 @@ Run `npm run dev` for development, or `npm run build` followed by `npm run previ
 
 After changing `src/content.config.ts`, restart the development server if entries are missing or stale. During the optional-date migration, the running server temporarily retained the old validation state; reloading the server restored agreement with the production build.
 
+## Internship portfolio
+
+The four-page engineering portfolio covers C4, the suspended swerve rover, L'SPACE, and configurable bumpers. Its public download is `public/assets/siddhartha-gupta-engineering-portfolio.pdf`; the local build copy is `output/pdf/siddhartha-gupta-engineering-portfolio.pdf`.
+
+To rebuild it, install the Python packages `reportlab`, `Pillow`, `pypdf`, and `PyMuPDF`, then run `python3 scripts/build_portfolio.py --render`. The render flag writes page images and validation results under `tmp/pdfs/` for visual review. Rebuild the Astro site afterward to include the current download in `dist/`.
+
 ## Content dates and ordering
 
 The legacy `publishDate` field controls chronological ordering within project categories and on the blog. It is not currently displayed to visitors. Project entries use the documented project/report period; blog entries use the original post's publication date when available. These dates are not the date a page was added to this repository.

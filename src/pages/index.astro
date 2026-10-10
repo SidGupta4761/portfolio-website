@@ -67,6 +67,7 @@ const selectedProjects = await Promise.all(
 				<header class="section-header stack gap-2 lg:gap-4">
 					<h3>Selected Work</h3>
 					<p>Some of my most notable projects from the past few years. Check out the Projects section and my GrabCAD (linked at the top and bottom) for more!</p>
+					<p><a class="portfolio-download" href="/assets/siddhartha-gupta-engineering-portfolio.pdf" download>Download Engineering Portfolio (PDF)</a></p>
 				</header>
 
 				<div class="gallery">
@@ -181,6 +182,12 @@ const selectedProjects = await Promise.all(
 
 	.section-header h3 {
 		font-size: var(--text-2xl);
+	}
+
+	.portfolio-download {
+		font-size: var(--text-md);
+		text-decoration: underline;
+		text-underline-offset: 0.2em;
 	}
 
 	@media (min-width: 50em) {

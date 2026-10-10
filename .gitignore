@@ -2,6 +2,11 @@
 dist/
 # generated types
 .astro/
+# portfolio rendering intermediates
+tmp/pdfs/
+# local portfolio build copy and Python caches
+output/pdf/
+__pycache__/
 
 # dependencies
 node_modules/
