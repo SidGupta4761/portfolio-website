@@ -4,6 +4,8 @@ dist/
 .astro/
 # portfolio rendering intermediates
 tmp/pdfs/
+# private internship media retained locally, excluded from the website
+tmp/private-iob-research/
 # local portfolio build copy and Python caches
 output/pdf/
 __pycache__/
